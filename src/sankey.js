@@ -281,7 +281,6 @@ export default function Sankey(props) {
     );
     for (const nodes of columns) {
       let y = y0;
-      debugger;
       for (const node of nodes) {
         node.y0 = y;
         node.y1 = y + node.value * ky;
