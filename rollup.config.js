@@ -1,5 +1,7 @@
-import {terser} from "rollup-plugin-terser";
+import terser from '@rollup/plugin-terser';
 import * as meta from "./package.json";
+import resolve from '@rollup/plugin-node-resolve';
+import babel from '@rollup/plugin-babel';
 
 const config = {
   input: "src/index.js",
@@ -13,7 +15,7 @@ const config = {
     banner: `// ${meta.homepage} v${meta.version} Copyright ${(new Date).getFullYear()} ${meta.author.name}`,
     globals: Object.assign({}, ...Object.keys(meta.dependencies || {}).filter(key => /^d3-/.test(key)).map(key => ({[key]: "d3"})))
   },
-  plugins: []
+  plugins: [resolve(), babel({ babelHelpers: 'bundled' })]
 };
 
 export default [
