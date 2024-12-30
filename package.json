@@ -1,6 +1,6 @@
 {
   "name": "sy-sankey",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Visualize flow between nodes in a directed acyclic network.",
   "keywords": [
     "d3",
@@ -12,8 +12,8 @@
     "url": "https://bost.ocks.org/mike/"
   },
   "license": "BSD-3-Clause",
-  "main": "dist/d3-sankey.js",
-  "unpkg": "dist/d3-sankey.min.js",
+  "main": "dist/sy-sankey.js",
+  "unpkg": "dist/sy-sankey.min.js",
   "module": "src/index.js",
   "homepage": "https://github.com/zxj777/sy-sankey",
   "repository": {
@@ -41,7 +41,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "eslint": "8",
-    "rollup": "2",
+    "rollup": "2.78.0",
     "tape": "5"
   }
 }

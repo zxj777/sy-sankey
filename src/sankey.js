@@ -281,9 +281,12 @@ export default function Sankey(props) {
     );
     for (const nodes of columns) {
       let y = y0;
-      for (const node of nodes) {
+      for (let  i =0;i < nodes.length; i++) {
+        const node=nodes[i];
         node.y0 = y;
         node.y1 = y + node.value * ky;
+        node.verticalIndex = i;
+        node.verticalMaxIndex = nodes.length -1;
         y = node.y1 + py;
         for (const link of node.sourceLinks) {
           link.width = link.value * ky;
